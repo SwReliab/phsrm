@@ -1,0 +1,35 @@
+<project name="phsrm" default="compile" basedir=".">
+
+	<property name="version" value="1.0.0"/>
+
+	<property name="jfreechart" value="jfreechart-1.0.19.jar"/>
+	<property name="jcommon" value="jcommon-1.0.23.jar"/>
+
+	<target name="init">
+		<mkdir dir="bin"/>
+		<mkdir dir="lib"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="bin"
+			classpath="lib/${jfreechart}; lib/${jcommon}"
+			includeantruntime="false"/>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar jarfile="${ant.project.name}-${version}.jar" basedir="bin">
+			<manifest>
+				<attribute name="Main-Class" value="phsrm.ui.PHSRMmain"/>
+				<attribute name="Class-Path" value="lib/${jfreechart} lib/${jcommon}"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="clean">
+		<delete verbose="true">
+		   <fileset dir="bin" includes="**/*.class"/>
+   		</delete>
+   		<delete file="${ant.project.name}-${version}.jar" verbose="true"/>
+ 	</target>
+
+</project>
