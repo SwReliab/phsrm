@@ -122,20 +122,20 @@ final public class CPHSRM extends NHPPSoftwareReliabilityModels {
 	// information criteria
 	
 	public int getNumberOfParameters() {
-//		return 2 * cph.getPhaseSize();
-		int m = 0;
-		for (int i=0; i<cph.getPhaseSize(); i++) {
-			if (cph.getInitialVector()[i] > 1.0e-6) {
-				m++;
-			}
-		}
-		m++;
-		for (int i=0; i<cph.getPhaseSize()-1; i++) {
-			if ((cph.getRateParameter()[i+1] - cph.getRateParameter()[i])/cph.getRateParameter()[i] > 1.0e-6) {
-				m++;
-			}
-		}
-		return m;
+		return 2 * cph.getPhaseSize();
+//		int m = 0;
+//		for (int i=0; i<cph.getPhaseSize(); i++) {
+//			if (cph.getInitialVector()[i] > 1.0e-6) {
+//				m++;
+//			}
+//		}
+//		m++;
+//		for (int i=0; i<cph.getPhaseSize()-1; i++) {
+//			if ((cph.getRateParameter()[i+1] - cph.getRateParameter()[i])/cph.getRateParameter()[i] > 1.0e-6) {
+//				m++;
+//			}
+//		}
+//		return m;
 	}
 
 	public double getLogLikelihood() {
