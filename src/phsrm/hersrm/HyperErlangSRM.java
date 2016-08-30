@@ -189,9 +189,10 @@ final public class HyperErlangSRM extends NHPPSoftwareReliabilityModels {
     public int getNumberOfParameters() {
 //    	return 3*hyerl.getNumberOfErlangDists() - 1;
 //    	return 3*hyerl.getNumberOfErlangDists();
-    	return 2*hyerl.getNumberOfErlangDists();
+//    	return 2*hyerl.getNumberOfErlangDists();
 //    	return 2*hyerl.getNumberOfErlangDists();
 //    	return 3*totalPhase - 2;
+    	return 2*totalPhase;
     }
 
 	public double getLogLikelihood() {
