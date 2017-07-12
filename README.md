@@ -43,7 +43,7 @@ The text file consists of three columns; interval time, the number of bugs, the 
 
 We give an example of grouped data. Consider the case where we collect the data that the number of bugs and its testing efforts every working day. The data is given by
 
-| Efforts | Faults |
+| Efforts | Faults | indicator |
 |:---:|:---:|:---:|
 |3|10|0|
 |1|5|0|
