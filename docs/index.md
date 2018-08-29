@@ -4,7 +4,7 @@ title: "PHSRM: Phase-Type Software Reliability Model"
 ---
 # PHSRM: Phase-Type Software Reliability Model
 
-GitHub repository: https://github.com/okamumu/phsrm
+GitHub repository: [https://github.com/okamumu/phsrm](https://github.com/okamumu/phsrm)
 
 ## Description
 
