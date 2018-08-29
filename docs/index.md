@@ -4,6 +4,8 @@ title: "PHSRM: Phase-Type Software Reliability Model"
 ---
 # PHSRM: Phase-Type Software Reliability Model
 
+GitHub repository: https://github.com/okamumu/phsrm
+
 ## Description
 
 Software reliability growth model (SRGM) is used for evaluating the number of bugs detected in testing.
