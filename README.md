@@ -23,15 +23,34 @@ phase-type models. The models that the tool can be handled are
 
 ## Installation
 
+### without compile
+
 1. Download the Java jar (phsrm-x.x.x.jar) file (download from <a href="https://github.com/okamumu/phsrm/releases/latest">Release page</a>)
-1. Download jfreechart-xxxx.jar and jcommon-xxxx.jar from JFreeChart (<a href="http://www.jfree.org/jfreechart/">http://www.jfree.org/jfreechart/</a>)
-1. Rename jfreechart-xxxx.jar to jfreechart.jar and jcommon-xxxx.jar to jcommon.jar and put three jar files in the same directory (classpath is set to refer jfreechart.jar and jcommon.jar of the current directory in Manifest of phsrm.jar)
+1. Download jfreechart-1.0.19.jar and jcommon-1.0.23.jar from JFreeChart (<a href="http://www.jfree.org/jfreechart/">http://www.jfree.org/jfreechart/</a>)
+1. Make a folder named 'lib' and put jfreechart-1.0.19.jar and jcommon-1.0.23.jar into the lib folder.
+(The default classpath in MANIFEST of phsrm.jar is set as lib/jfreechart-1.0.19.jar and lib/jcommon-1.0.23.jar)
 1. Execute phsrm.jar (Default: `java -jar phsrm.jar 10 10`):
 
     ```
     java -jar phsrm.jar [number of phases in CPH-SRM] [number of phases in HEr-SRM]
     ```
 1. That's all.
+
+### with compile
+
+Require ant and JDK.
+
+1. Execute
+
+   ```
+   ant jar
+   ```
+1. Execute phsrm.jar (Default: `java -jar phsrm.jar 10 10`):
+
+   ```
+   java -jar phsrm.jar [number of phases in CPH-SRM] [number of phases in HEr-SRM]
+   ```
+1. That's all
 
 ## How to use
 
@@ -81,4 +100,3 @@ The corresponding results (graph etc.) apper in the right-side panels.
 1. H. Okamura and T. Dohi, Building phase-type software reliability models, Proceedings of The 17th International Symposium on Software Reliability Engineering (ISSRE'06), pp. 289-298, IEEE Computer Society Press, 2006.
 1. H. Okamura and T. Dohi, Hyper-Erlang software reliability model, Proceedings of 14th Pacific Rim International Symposium on Dependable Computing (PRDC'08), pp. 232-239, IEEE CPS, 2008.
 1. [H. Okamura and T. Dohi, Phase-type software reliability model: Parameter estimation algorithms with grouped data, Annals of Operations Research, vol. 244, issue 1, pp. 177-208, 2016.](https://doi.org/10.1007/s10479-015-1870-0)
-
